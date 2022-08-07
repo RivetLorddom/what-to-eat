@@ -17,7 +17,7 @@ def main():
         new_food = (
             input("\nName of the dish that you want to save: ").strip().capitalize()
         )
-        save_food(new_food)
+        save_food("foodlist.txt", new_food)
 
     if choice == "del":
         print("This option is not implemented yet. But maybe it will be. One day")
@@ -50,9 +50,9 @@ def get_food():
         return random.choice(lines).strip()
 
 
-def save_food(food_name):
+def save_food(file_name, food_name):
 
-    with open("foodlist.txt", "a") as file:
+    with open(file_name, "a") as file:
         file.write(f"{food_name}\n")
 
 
