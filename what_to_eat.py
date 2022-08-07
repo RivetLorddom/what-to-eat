@@ -11,18 +11,19 @@ def main():
 
     if choice == "eat":
         food_to_eat = get_food()
-        print(f"\n    Today you should eat: {food_to_eat}")
-
+        print(f"\nToday you should eat: {food_to_eat}")
 
     if choice == "add":
-        new_food = input("\nName of the dish that you want to save: ").strip().capitalize()
+        new_food = (
+            input("\nName of the dish that you want to save: ").strip().capitalize()
+        )
         save_food(new_food)
 
     if choice == "del":
         print("This option is not implemented yet. But maybe it will be. One day")
 
-    print("\nThank you, see you again!")
-    print("=========================")
+    print("\n    Thank you, see you again!")
+    print("   ===========================\n")
 
 
 def get_choice():
@@ -30,7 +31,9 @@ def get_choice():
     Asks the user for input in a loop, returns a choice string only if the input is valid
     """
     while True:
-        choice = input("Would you like to eat something or add a new item to the list of your favorite dishes? (eat/add): ")
+        choice = input(
+            "Would you like to eat something or add a new item to the list of your favorite dishes? (eat/add): "
+        )
         if choice in ["eat", "add", "del"]:
             return choice
 
@@ -51,7 +54,6 @@ def save_food(food_name):
 
     with open("foodlist.txt", "a") as file:
         file.write(f"{food_name}\n")
-    
 
 
 if __name__ == "__main__":
