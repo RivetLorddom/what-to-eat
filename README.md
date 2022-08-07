@@ -2,8 +2,6 @@
 
 ## My final python project for CS50P
 
-#### Video Demo:  <https://youtu.be/yzQI7C4snrY>
-
 #### Description:
 Whenever hungry and unable to decide what to eat, ask this program for help.
 Create a list of dishes that you like (written to file), and let the program decide for you, what the choice for the day is.
