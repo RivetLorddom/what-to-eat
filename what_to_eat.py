@@ -1,8 +1,10 @@
 import random, sys
 from os.path import exists, getsize
+from clear_screen import clear
 
 
 def main():
+    clear()
     print("\n    Welcome! I am here to help you decide what to eat!")
     print("   ====================================================\n")
     choice = get_choice()
@@ -17,7 +19,7 @@ def main():
         save_food(new_food)
 
     if choice == "del":
-        print("This option is not implemented yet")
+        print("This option is not implemented yet. But maybe it will be. One day")
 
     print("\nThank you, see you again!")
     print("=========================")
