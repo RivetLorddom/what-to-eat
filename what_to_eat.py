@@ -1,5 +1,5 @@
 import random, sys
-from os.path import exists
+from os.path import exists, getsize
 
 
 def main():
@@ -35,8 +35,8 @@ def get_choice():
 
 def get_food():
 
-    # check if file exists
-    if not exists("foodlist.txt"):
+    # check if file exists and contains anything
+    if not exists("foodlist.txt") or getsize("foodlist.txt") == 0:
         sys.exit("No favorite food registered yet. Try again.")
 
     # open file and return one random dish name
